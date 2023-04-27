@@ -1,9 +1,11 @@
 "use strict";
 
-function showGreeting() {
-  const messageDiv = document.getElementById('messageDiv');
-  messageDiv.innerHTML = "now you know why it failed";
+showGreeting();
+
+function showGreeting(line) {
+  const messageDiv = document.getElementById("messageDiv");
+  messageDiv.innerHTML = "Yeah because you were wrong" + " " + line;
   console.log(messageDiv);
 }
 
-showGreeting()
+showGreeting("Arthur");
