@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <label for="number1">Number 1:</label>
+      <input type="number" name="number1" id="number1Field" value ="12" />
+      <br />
+      <label for="number2">Number 2</label>
+      <input type="number" name="number2" id="number2Field" value ="14" />
+      <br />
+      <button id="add" onclick="add();">Add</button>
+      <button id="subtract" onclick="subtract()">Subtract</button>
+      <button id="divide" onclick="divide()">Divide</button>
+      <button id="multiply" onclick="multiply()">Multiply</button>
+      <br />
+      <label for="answer">Answer:</label>
+      <input id="calculator" type="number"  value="" />
+    </main>
+    <footer></footer>
+    <script>
+      const number1 = document.getElementById("number1Field");
+      const number2 = document.getElementById("number2Field");
+      const inputElement = document.getElementById("calculator");
+
+
+      function add(){
+      const answer = parseFloat(number1Field.value) + parseFloat(number2Field.value)
+      inputElement.value = answer;
+      }
+      function subtract() {
+        const answer = parseFloat(number1Field.value) - parseFloat(number2Field.value)
+      inputElement.value = answer; 
+
+      }
+
+      function divide() {
+        const answer = parseFloat(number1Field.value) / parseFloat(number2Field.value)
+      inputElement.value = answer;
+      }
+
+      function multiply() {
+        const answer = parseFloat(number1Field.value) * parseFloat(number2Field.value)
+      inputElement.value = answer;
+      }
+    </script>
+    <script src="https://dohliam.github.io/dropin-minimal-css/switcher.js" type="text/javascript"></script>
+  </body>
+</html>
