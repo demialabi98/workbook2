@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
+    <title>Fahrenheit to Celsius</title>
+  </head>
+
+  <style>
+    form {
+      margin: auto;
+      justify-content: center;
+      margin-top: 5%;
+    }
+  </style>
+  <body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Temperature</a>
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="f-c.html">F to C</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="c-f.html">C to f</a>
+                  </li>
+
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+    </header>
+    <form>
+      <label>Fahrenheit</label>
+      <input id="inputFahrenheit" type="number" placeholder="" value="" />
+      <button id="converter" onclick="convert1()">Convert</button>
+      <br />
+      <label>Celsius</label>
+      <input id="inputCelsius" type="number" placeholder="" value="" />
+    </form>
+
+    <script>
+      "use strict";
+      const inputfahren = document.getElementById("inputFahrenheit");
+      const inputcelsius = document.getElementById("inputCelsius");
+
+      function convert1() {
+        let result = parseFloat(inputFahrenheit.value - 32) * 5/9;
+        inputcelsius.value = result;
+      }
+    </script>
+  </body>
+</html>
